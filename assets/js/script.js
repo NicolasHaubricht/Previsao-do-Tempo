@@ -26,5 +26,4 @@ function resultadoTela(dados){
     document.querySelector(".tempo").innerHTML = dados.weather[0].description;
     // Imagem
     document.querySelector(".img-tempo").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`;
-
 }

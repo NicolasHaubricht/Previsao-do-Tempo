@@ -1,3 +1,4 @@
+/* Variaveis */
 :root {
     --cor-borda: #ffffff4b;
     --cor-branca: #fff;
@@ -5,6 +6,7 @@
     --cor-cidade: #9fd0ec;
 }
 
+/* Reset */
 * {
     padding: 0;
     margin: 0;
@@ -12,16 +14,19 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Body */
 body {
     background-image: url("../img/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
     display: grid;
     align-items: center;
     justify-content: center;
 }
 
+/* Conteudo Principal */
 main {
     width: 70vw;
     background-color: #000;
@@ -39,37 +44,37 @@ main {
     grid-template-rows: auto 60vh;
 }
 
-/* BUSCAR */
+/* Buscar */
 #busca {
     grid-area: pesquisar;
     display: flex;
     gap: 15px;
 }
 
-#lupa{
-    width: 52px;
-    height: auto;
-    padding: 0.5rem;
-    cursor: pointer; 
-    transition: all 1s;
-    background-color: var(--cor-branca);
-    border-radius: 50%;
-}
+    input {
+        width: 90%;
+        padding: 1rem;
+        border-radius: 1rem;
+        outline: none;
+        border: none;
+    }
 
-#lupa:hover {
-    transform: scale(1.1);
-}
+    #lupa{
+        width: 52px;
+        height: auto;
+        padding: 0.5rem;
+        cursor: pointer; 
+        transition: all 1s;
+        background-color: var(--cor-branca);
+        border-radius: 50%;
+    }
 
-input {
-    width: 90%;
-    padding: 1rem;
-    border-radius: 1rem;
-    outline: none;
-    border: none;
-}
+    #lupa:hover {
+        transform: scale(1.1);
+    }
 
 
-/* INFORMAÇÕES */
+/* Informações */
 
 /*Info Esquerda*/
 #card-esquerda {
@@ -112,3 +117,38 @@ input {
     strong {
         color: var(--cor-cidade);
     }
+
+
+/* Responsividade */
+@media only screen and (max-width: 800px) {
+    main{
+    width: 80vw;
+    height: auto;
+    grid-template-areas: 
+    "pesquisar"
+    "esquerda"
+    "direita"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    }
+
+
+    #cidade {
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    #cidade {
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 0.7rem;
+    }
+}
