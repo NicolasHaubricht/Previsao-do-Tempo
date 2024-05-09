@@ -16,32 +16,33 @@
     <main>
         <!-- Pesquisar -->
         <div id="busca">
-            <input type="text" placeholder="Digite a cidade que deseja ver o clima: ">
-            <img onclick="realizarBusca()" id="lupa" src="assets/img/buscar.png" alt="">
+            <!-- Usuário Digita o Local -->
+            <input class="input" type="text" placeholder="Digite a cidade que deseja ver o clima: ">
+            <!-- Realizar Busca -->
+            <img onclick="clicarLupa()" id="lupa" src="https://www.svgrepo.com/show/488200/find.svg" alt="">
         </div>
 
         <!-- Informações Imagem -->
         <div id="card-esquerda">
             <!-- Imagem -->
-            <img id="img-tempo" src="https://openweathermap.org/img/wn/04n.png" alt="">
+            <img class="img-tempo" src="https://openweathermap.org/img/wn/04n.png" alt="">
             <!-- Tempo -->
-            <p id="tempo">Nublado</p>
+            <p class="tempo">Nublado</p>
         </div>
 
         <!-- Informações Texto -->
         <div id="card-direita">
             <!-- Cidade -->
             <div>
-                <h1>Tempo em</h1>
-                <h1 id="cidade">Niterói</h1>
+                <h1 id="cidade">Tempo em <br> <strong class="cidade-saida">Digite Uma Localidade</strong></h1>
             </div>
             <!-- Temperatura -->
-            <p id="temperatura">Temperatura: 38°C</p>
+            <p class="temperatura">Temperatura:  °C</p>
             <!-- Umidade -->
-            <p id="umidade">Umidade: 50%</p>
+            <p class="umidade">Umidade: %</p>
         </div>
-
     </main>
 
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

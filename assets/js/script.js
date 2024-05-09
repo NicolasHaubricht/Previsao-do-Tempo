@@ -1,7 +1,30 @@
 // Chave API
 const key = "aff65623ecfa455088b02a02a127e531"
 
+// Evento Clicar na Lupa
+function clicarLupa(){
+    const cidade = document.querySelector(".input").value;
+    realizarBusca(cidade);
+}
 
-function realizarBusca(){
-    
+// Busca Dados na API
+async function realizarBusca(cidade){
+    const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${key}&lang=pt_br&units=metric`).then(resultado => resultado.json());
+    console.log(dados);
+    resultadoTela(dados)
+}
+
+// Saida no HTML
+function resultadoTela(dados){
+    // Nome da Local
+    document.querySelector(".cidade-saida").innerHTML = dados.name;
+    // Temperatura no Local
+    document.querySelector(".temperatura").innerHTML ="Temperatura: " + parseInt(dados.main.temp) + " °C";
+    // Umidade no Local
+    document.querySelector(".umidade").innerHTML ="Umidade: " + dados.main.humidity + "%";
+    // Como está o Clima no Local
+    document.querySelector(".tempo").innerHTML = dados.weather[0].description;
+    // Imagem
+    document.querySelector(".img-tempo").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`;
+
 }
