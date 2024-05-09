@@ -19,6 +19,7 @@ body {
     background-image: url("../img/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
     height: 100vh;
     display: grid;
@@ -133,6 +134,10 @@ main {
     grid-template-rows: auto auto auto;
     }
 
+    #card-direita {
+        align-items: center;
+        justify-content: center;
+    }
 
     #cidade {
         font-size: 1.5rem;

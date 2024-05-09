@@ -16,13 +16,17 @@ async function realizarBusca(cidade){
 
 // Saida no HTML
 function resultadoTela(dados){
-    // Nome da Local
+    // Nome 
     document.querySelector(".cidade-saida").innerHTML = dados.name;
-    // Temperatura no Local
+    // País
+    document.querySelector(".pais").innerHTML = "País: " +dados.sys.country;
+    // Temperatura
     document.querySelector(".temperatura").innerHTML ="Temperatura: " + parseInt(dados.main.temp) + " °C";
-    // Umidade no Local
+    // Umidade 
     document.querySelector(".umidade").innerHTML ="Umidade: " + dados.main.humidity + "%";
-    // Como está o Clima no Local
+    // Vento 
+    document.querySelector(".vento").innerHTML ="Vento: " + dados.wind.speed + "Km/h";
+    // Clima
     document.querySelector(".tempo").innerHTML = dados.weather[0].description;
     // Imagem
     document.querySelector(".img-tempo").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`;
