@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- FONTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Previsão do Tempo</title>
+</head>
+<body>
+    <!-- Card Principal -->
+    <main>
+        <!-- Pesquisar -->
+        <div id="busca">
+            <input type="text" placeholder="Digite a cidade que deseja ver o clima: ">
+            <img onclick="realizarBusca()" id="lupa" src="assets/img/buscar.png" alt="">
+        </div>
+
+        <!-- Informações Imagem -->
+        <div id="card-esquerda">
+            <!-- Imagem -->
+            <img id="img-tempo" src="https://openweathermap.org/img/wn/04n.png" alt="">
+            <!-- Tempo -->
+            <p id="tempo">Nublado</p>
+        </div>
+
+        <!-- Informações Texto -->
+        <div id="card-direita">
+            <!-- Cidade -->
+            <div>
+                <h1>Tempo em</h1>
+                <h1 id="cidade">Niterói</h1>
+            </div>
+            <!-- Temperatura -->
+            <p id="temperatura">Temperatura: 38°C</p>
+            <!-- Umidade -->
+            <p id="umidade">Umidade: 50%</p>
+        </div>
+
+    </main>
+
+</body>
+</html>

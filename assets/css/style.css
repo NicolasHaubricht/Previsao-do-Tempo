@@ -1,0 +1,110 @@
+:root {
+    --cor-borda: #ffffff4b;
+    --cor-branca: #fff;
+    --cor-cinza-escuro: #171717;
+    --cor-cidade: #9fd0ec;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 40vw;
+    background-color: #000;
+    opacity: 0.7;
+    height: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-areas: 
+    "pesquisar pesquisar"
+    "esquerda direita"
+    ;
+    grid-gap: 2em;
+    grid-template-columns: 35% auto;
+    grid-template-rows: auto 50vh;
+}
+
+/* BUSCAR */
+#busca {
+    grid-area: pesquisar;
+    display: flex;
+    gap: 15px;
+}
+
+#lupa{
+    width: 65px;
+    height: 65px;
+    cursor: pointer; 
+    transition: all 1s;
+}
+
+#lupa:hover {
+    transform: scale(1.1);
+}
+
+input {
+    width: 90%;
+    padding: 1rem;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+}
+
+
+/* INFORMAÇÕES */
+
+/*Info Esquerda*/
+#card-esquerda {
+    grid-area: esquerda;
+    border: solid 2px var(--cor-borda) ;
+    border-radius: 1rem;
+    color: var(--cor-branca);
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    #img-tempo {
+        width: 100px;
+    }
+
+    #tempo {
+        text-align: center;
+        padding: 0rem 0rem 2rem ;
+    }
+
+/* Info Direita */
+
+#card-direita {
+    color: var(--cor-branca);
+    border: solid 2px var(--cor-borda);
+    border-radius: 1rem;
+    grid-area: direita;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+    #cidade {
+        color: var(--cor-cidade);
+    }
