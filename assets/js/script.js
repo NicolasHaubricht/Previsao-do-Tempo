@@ -1,5 +1,5 @@
 // Chave API
-const key = "aff65623ecfa455088b02a02a127e531"
+const key = "0000000000000000000000000000000"
 
 // Evento Clicar na Lupa
 function clicarLupa(){
